@@ -16,6 +16,7 @@ import {
     FaInstagram,
     FaGitlab,
     FaMediumM,
+    FaFacebookF
 } from 'react-icons/fa';
 import { AiOutlineSend, AiOutlineCheckCircle } from 'react-icons/ai';
 import { FiPhone, FiAtSign } from 'react-icons/fi';
@@ -176,7 +177,7 @@ function Contacts() {
                                     Name
                                 </label>
                                 <input
-                                    placeholder='John Doe'
+                                    placeholder='Write your name here'
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     type='text'
@@ -192,7 +193,7 @@ function Contacts() {
                                     Email
                                 </label>
                                 <input
-                                    placeholder='John@doe.com'
+                                    placeholder='Write your email here'
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     type='email'
@@ -292,7 +293,7 @@ function Contacts() {
                                 {contactsData.email}
                             </p>
                         </a>
-                        <a
+                        {/* <a
                             href={`tel:${contactsData.phone}`}
                             className='personal-details'
                         >
@@ -310,9 +311,20 @@ function Contacts() {
                             <p style={{ color: theme.tertiary }}>
                                 {contactsData.address}
                             </p>
-                        </div>
+                        </div> */}
 
                         <div className='socialmedia-icons'>
+                            {socialsData.facebook && (
+                                <a
+                                    href={socialsData.facebook}
+                                    target='_blank'
+                                    rel='noreferrer'
+                                    className={classes.socialIcon}
+                                >
+                                    <FaFacebookF aria-label='Facebook' />
+                                </a>
+                            )}
+                            
                             {socialsData.twitter && (
                                 <a
                                     href={socialsData.twitter}
@@ -323,7 +335,7 @@ function Contacts() {
                                     <FaTwitter aria-label='Twitter' />
                                 </a>
                             )}
-                            {socialsData.github && (
+                            {/* {socialsData.github && (
                                 <a
                                     href={socialsData.github}
                                     target='_blank'
@@ -332,7 +344,7 @@ function Contacts() {
                                 >
                                     <FaGithub aria-label='GitHub' />
                                 </a>
-                            )}
+                            )} */}
                             {socialsData.linkedIn && (
                                 <a
                                     href={socialsData.linkedIn}
@@ -343,7 +355,7 @@ function Contacts() {
                                     <FaLinkedinIn aria-label='LinkedIn' />
                                 </a>
                             )}
-                            {socialsData.instagram && (
+                            {/* {socialsData.instagram && (
                                 <a
                                     href={socialsData.instagram}
                                     target='_blank'
@@ -422,7 +434,7 @@ function Contacts() {
                                 >
                                     <FaGitlab aria-label='GitLab' />
                                 </a>
-                            )}
+                            )} */}
                         </div>
                     </div>
                 </div>

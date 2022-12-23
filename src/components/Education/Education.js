@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
-
+import placeholder from '../../assets/png/placeholder.png'
+import AnimationLottie from '../helper/animation-lottie';
 import './Education.css'
 import EducationCard from './EducationCard';
 
 import { educationData } from '../../data/educationData'
 
+
+//import AnimationLottie from '../helper/animation-lottie';
 function Education() {
 
     const { theme } = useContext(ThemeContext);
@@ -29,6 +32,11 @@ function Education() {
                 </div>
                 <div className="education-image">
                     <img src={theme.eduimg} alt=""/>
+                    {/* <img src={placeholder} alt=' ' />  */}
+                    {/* <AnimationLottie animationPath={theme.eduimg} width='95%' /> */}
+                    
+                    
+                    
                 </div>
             </div>
         </div>

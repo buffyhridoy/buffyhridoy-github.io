@@ -7,7 +7,7 @@ export const socialsData = {
     mail: 'badhruddouza@gmail.com',
     orcid : 'https://orcid.org/0000-0001-7055-332X',
     researchgate : 'https://www.researchgate.net/profile/Mohammad-Khan-353',
-    // instagram: 'https://www.instagram.com/',
+     instagram: 'https://www.instagram.com/',
     // codepen: 'https://codepen.io/',
     // reddit: 'https://www.reddit.com/user/',
     // blogger: 'https://www.blogger.com/',

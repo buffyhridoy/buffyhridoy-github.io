@@ -2,6 +2,9 @@ import React, { useContext, useState } from 'react';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import Fade from 'react-reveal/Fade';
 import { IoMenuSharp, IoHomeSharp } from 'react-icons/io5';
+import { FaTools } from 'react-icons/fa';
+import {MdCastForEducation} from 'react-icons/md';
+import{BsBookHalf} from 'react-icons/bs';
 import { HiDocumentText } from 'react-icons/hi';
 import { BsFillGearFill } from 'react-icons/bs';
 import { MdPhone } from 'react-icons/md';
@@ -134,7 +137,8 @@ function Navbar() {
         <div className='navbar'>
             <div className='navbar--container'>
                 <h1 style={{ color: theme.secondary }}>
-                    {shortname(headerData.name)}
+                    {/* {shortname(headerData.name)} */}
+                    BKhan
                 </h1>
 
                 <IoMenuSharp
@@ -197,58 +201,6 @@ function Navbar() {
 
                         <Fade left>
                             <NavLink
-                                to='/#about'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <div className={classes.drawerItem}>
-                                    <FaUser className={classes.drawerIcon} />
-                                    <span className={classes.drawerLinks}>
-                                        About
-                                    </span>
-                                </div>
-                            </NavLink>
-                        </Fade>
-
-                        <Fade left>
-                            <NavLink
-                                to='/#resume'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <div className={classes.drawerItem}>
-                                    <HiDocumentText
-                                        className={classes.drawerIcon}
-                                    />
-                                    <span className={classes.drawerLinks}>
-                                        Resume
-                                    </span>
-                                </div>
-                            </NavLink>
-                        </Fade>
-
-                        <Fade left>
-                            <NavLink
-                                to='/#services'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <div className={classes.drawerItem}>
-                                    <BsFillGearFill
-                                        className={classes.drawerIcon}
-                                    />
-                                    <span className={classes.drawerLinks}>
-                                        Services
-                                    </span>
-                                </div>
-                            </NavLink>
-                        </Fade>
-
-                        <Fade left>
-                            <NavLink
                                 to='/#blog'
                                 smooth={true}
                                 spy='true'
@@ -264,8 +216,114 @@ function Navbar() {
                                 </div>
                             </NavLink>
                         </Fade>
-
+        
                         <Fade left>
+                            <NavLink
+                                to='/#skills'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <FaTools className={classes.drawerIcon} />
+                                    <span className={classes.drawerLinks}>
+                                        Skills
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+
+
+                        {/* <Fade left>
+                            <NavLink
+                                to='/#about'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <FaUser className={classes.drawerIcon} />
+                                    <span className={classes.drawerLinks}>
+                                        About
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade> */}
+
+                        {/* <Fade left>
+                            <NavLink
+                                to='/#resume'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <HiDocumentText
+                                        className={classes.drawerIcon}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        Resume
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade> */}
+    
+                        <Fade left>
+                            <NavLink
+                                to='/#experience'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <FaUser className={classes.drawerIcon} />
+                                    <span className={classes.drawerLinks}>
+                                        Experience
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+                    
+                        <Fade left>
+                            <NavLink
+                                to='/#education'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <BsBookHalf className={classes.drawerIcon} />
+                                    <span className={classes.drawerLinks}>
+                                        Education
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+                        
+                
+
+
+                        {/* <Fade left>
+                            <NavLink
+                                to='/#services'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <BsFillGearFill
+                                        className={classes.drawerIcon}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        Services
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade> */}
+
+                        
+
+                        {/* <Fade left>
                             <NavLink
                                 to='/#contacts'
                                 smooth={true}
@@ -279,7 +337,7 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        </Fade> */}
                     </div>
                 </div>
             </Drawer>

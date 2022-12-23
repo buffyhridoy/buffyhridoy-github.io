@@ -7,15 +7,24 @@ import './Experience.css';
 import { experienceData } from '../../data/experienceData'
 import ExperienceCard from './ExperienceCard';
 
+import  AnimationLottie  from '../helper/animation-lottie';
+import codings from '../../assets/lottie/coding.json';
+
 function Experience() {
 
     const { theme } = useContext(ThemeContext);
     return (
         <div className="experience" id="experience" style={{backgroundColor: theme.secondary}}> 
              <div className="experience-body">
-                 <div className="experience-image">
+                 {/* <div className="experience-image">
                      <img src={theme.expimg} alt="" />
-                 </div>
+                 </div> */}
+                  {/* <div className="about-animation">
+                        <AnimationLottie animationPath={codings} />
+                    </div> */}
+                    <div className="experience-image">
+                        <AnimationLottie animationPath={codings} width='95%' />
+                    </div>
                  <div className="experience-description">
                     <h1 style={{color:theme.primary}}>Experience</h1>
                     {experienceData.map(exp =>(
@@ -27,6 +36,7 @@ function Experience() {
                             startYear={exp.startYear}
                             endYear={exp.endYear}/>
                     ))}
+                    
                  </div>
              </div>
         </div>

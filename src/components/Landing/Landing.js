@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Button } from '@material-ui/core';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { makeStyles } from '@material-ui/core/styles';
-
+import Typed from 'react-typed';
 import './Landing.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { headerData } from '../../data/headerData';
@@ -144,6 +144,46 @@ function Landing() {
                                 />
                             </a>
                         )}
+                        
+                        {socialsData.medium && (
+                            <a
+                                href={socialsData.medium}
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <FaMedium
+                                    className='landing--social'
+                                    style={{ color: theme.secondary }}
+                                    aria-label='Medium'
+                                />
+                            </a>
+                        )}
+                    {socialsData.researchgate && (
+                            <a
+                                href={socialsData.researchgate}
+                                target='_blank'
+                                rel='noreferrer'
+                            >   
+                                <FaResearchgate
+                                    className='landing--social'
+                                    style={{ color: theme.secondary }}
+                                    aria-label='ResearchGate'
+                                />
+                            </a>
+                        )}
+                        {socialsData.orcid && (
+                            <a
+                                href={socialsData.orcid}
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <FaOrcid
+                                    className='landing--social'
+                                    style={{ color: theme.secondary }}
+                                    aria-label='ORCID'
+                                />
+                            </a>
+                        )}
                         {socialsData.twitter && (
                             <a
                                 href={socialsData.twitter}
@@ -157,8 +197,21 @@ function Landing() {
                                 />
                             </a>
                         )}
+                        {socialsData.facebook && (
+                            <a
+                                href={socialsData.facebook}
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <FaFacebook
+                                    className='landing--social'
+                                    style={{ color: theme.secondary }}
+                                    aria-label='Facebook'
+                                />
+                            </a>
+                        )}
                         
-                        {socialsData.youtube && (
+                        {/* {socialsData.youtube && (
                             <a
                                 href={socialsData.youtube}
                                 target='_blank'
@@ -183,7 +236,7 @@ function Landing() {
                                     aria-label='Blogger'
                                 />
                             </a>
-                        )}
+                        )} */}
                     </div>
                 </div>
                 <img
@@ -203,7 +256,16 @@ function Landing() {
                         className='lcr--content'
                         style={{ color: theme.tertiary }}
                     >
-                        <h6>{headerData.title}</h6>
+                        <Typed
+                            strings={[
+                                'Machine Learning Practitioner',
+                                'Data Analyst']}
+                            typeSpeed={40}
+                            backSpeed={50}
+                            className="typed-header"
+                            style={{ color: theme.primary, fontSize: '20px' }}
+                            loop
+                        />
                         <h1>{headerData.name}</h1>
                         <p>{headerData.desciption}</p>
 
